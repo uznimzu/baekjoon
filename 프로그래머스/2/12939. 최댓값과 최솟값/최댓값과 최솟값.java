@@ -8,15 +8,19 @@ import java.util.Arrays;
 
 class Solution {
     public String solution(String s) {
+        // 문자열을 공백으로 분리
         String [] result = s.split(" ");
+        // 해당 문자열을 다시 정수 배열로 변환
         int [] numbers = new int[result.length];
         for(int i = 0; i<result.length; i++){
             numbers[i] = Integer.parseInt(result[i]);
         }
-        
+
+        // 임의의 최대 최소 할당
         int min = numbers[0];
         int max = numbers[0];
-        
+
+        // numbers에서 진짜 최대 최소 찾기
         for(int i = 0; i<numbers.length; i++){
             if(numbers[i] > max){
                 max = numbers[i];
