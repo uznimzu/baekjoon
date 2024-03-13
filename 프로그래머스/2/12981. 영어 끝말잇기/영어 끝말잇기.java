@@ -11,6 +11,10 @@ class Solution {
                 return new int[]{(i % n) + 1, (i / n) + 1};
             }
             sbWords.add(words[i]);
+            
+            // i번째 단어와 i-1의 단어의 맨 앞문자를 비교하면서 확인하기 => charAt으로 하면 됐구나...!!!!!! 여기서 어떻게 구현해야 하는 지 도무지 생각 안 나서 1시간 다 날렸네 ,,
+            // 다를 시 번호와 촤례 반환..
+            // i>0을 빼고 하게 된다면 런타임 에러가 난다고 한다.. 쓰읍 참으로 알다가도 모루것다 자바는
             if(i > 0 && words[i - 1].charAt(words[i - 1].length() - 1) != words[i].charAt(0)) {
                      return new int[]{(i % n) + 1, (i / n) + 1};
                     
