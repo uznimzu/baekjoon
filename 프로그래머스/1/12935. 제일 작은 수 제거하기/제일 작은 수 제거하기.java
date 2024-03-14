@@ -1,3 +1,5 @@
+// arnlist<integer> -> int[]로 반환하는 거 잊지 말기
+
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +22,7 @@ class Solution {
               answer.add(arr[i]);
           }
         }
-        
+        // ArrayList<Integer>를 int[]로 변환
         int[] result = new int[answer.size()];
         for(int i =0; i<answer.size(); i++){
             result[i] = answer.get(i);
