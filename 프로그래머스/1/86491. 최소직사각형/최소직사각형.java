@@ -9,14 +9,10 @@ class Solution {
                 sizes[i][0] = sizes[i][1];
                 sizes[i][1] = change;
             }
-            // 현재 길이랑 w랑 비교하면서 w에서 가장 큰 값 구하기
-            if(sizes[i][0] > w){
-                w = sizes[i][0];
-            }
-            // 현재 길이랑 h랑 비교하면서 h에서 가장 큰 값 구하기
-            if(sizes[i][1] > h){
-                h=sizes[i][1];
-            } 
+            // 최대 w,h구하기
+            w = Math.max(w,sizes[i][0]);
+            h = Math.max(h, sizes[i][1]);
+
         }
         // 곱하면 답 ~!
         return w*h;
